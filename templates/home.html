@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container has-text-centered bg-text" style="width: 100%">
+  <h1 id='logo'>
+    DOG - CAT
+  </h1>
+  <h2>
+    CLASSIFICATION
+  </h2>
+  <div>
+    <i class="arrow_down"></i>
+    <form action="/classify" method="post" enctype="multipart/form-data"
+      style="margin-top: 30px; width: 80%; text-align: center; margin: auto;">
+      <div class="file has-name is-centered">
+        <label class="file-label">
+          <input class="file-input" type="file" id="image" name="image">
+          <span class="file-cta">
+            <span class="file-label">
+              Upload an image
+            </span>
+          </span>
+          <span class="file-name" id="file-name">
+            No file chosen
+          </span>
+
+        </label>
+      </div>
+      <br>
+      <input type="submit" value="Classify" class="button btn-secondary" name="image" id="classify_button">
+    </form>
+  </div>
+</div>
+{% endblock %}

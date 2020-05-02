@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container bg-text" style="width: 100%; text-align: left;">
+  <div class="columns">
+    <div class="column" style="width: 100%">
+      <h1 id='logo' style="text-align: left; font-size: 4rem">
+        The Model
+      </h1>
+      <p id="model_des">
+        This classifer was based on the infamous model: <span style="font-weight: bold">Xception</span> using Transfer
+        Learning.
+        The train dataset contains <span style="font-weight: bold">12,500 images of cats</span> and <span
+          style="font-weight: bold">12,500 of dogs</span>.
+        The model archieved ~99% accuracy on train set and ~94% on validation set.
+        <br>
+        <br>
+        The final Dense layer uses <span style="font-weight: bold">Sigmoid</span> activation function, it returns a
+        probablity of the sample to be a cat.
+        For that reason, this classifer is <span style="font-weight: bold">only useful to differentiate between dogs and
+          cats</span>.
+      </p>
+    </div>
+
+    <div class="column">
+      <img src="/static/images/xception.png" class="pred-img" style="box-shadow:7px 7px 4px rgba(0,0,0,0.25)">
+    </div>
+
+  </div>
+</div>
+{% endblock %}

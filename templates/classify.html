@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container has-text-centered bg-text" style="width: 100%">
+
+  <div class="columns">
+    <div class="column has-text-centered">
+      <!-- <figure class="image is-1by1"> -->
+      <img class="pred_img" src="{{ url_for('send_file', filename=image_file_name)}}">
+      <!-- </figure> -->
+    </div>
+
+    <div class="column" style="font-size:2.5rem">
+
+      <h1 id="pred">
+        This is a
+      </h1>
+
+      <h1 class="box" style="padding: 0%; width: 10rem; background-color: white" id="label">
+        {{ label }}
+      </h1>
+
+      <h2 style="font-size: 2rem">
+        Confidence: <span style="font-weight: bold; color:whitesmoke;">{{prob}}%</span>
+      </h2>
+      <br>
+      <a href="/" class="button is-danger is-inverted is-outlined" style="font-size:1.5rem">Back to Home</a>
+    </div>
+
+  </div>
+</div>
+{% endblock %}
